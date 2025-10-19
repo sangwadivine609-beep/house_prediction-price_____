@@ -3,7 +3,7 @@ import pandas as pd
 import joblib  # use joblib instead of pickle
 
 # Load trained model using joblib
-loaded_model = joblib.load("house_price_model_small.joblib")  # compressed/smaller model
+loaded_model = joblib.load("C:/Users/Benjamin/Desktop/DIVINE/house_price_model_small.joblib")  # compressed/smaller model
 
 # Load dataset for visualization
 df = pd.read_csv("USA_Housing.csv")
@@ -36,3 +36,4 @@ if st.button("Predict House Price"):
     price = predict_house_price(income, age, rooms, bedrooms, population)
 
     st.success(f"💰 Predicted House Price: RWF {price:,.2f}")
+
