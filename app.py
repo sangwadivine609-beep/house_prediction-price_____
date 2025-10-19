@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import joblib  # use joblib instead of pickle
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Load trained model using joblib
 loaded_model = joblib.load("house_price_model_small.joblib")  # compressed/smaller model
@@ -36,4 +34,5 @@ population = st.sidebar.number_input("Area Population", 1000.0, 100000.0, 23086.
 # Prediction button
 if st.button("Predict House Price"):
     price = predict_house_price(income, age, rooms, bedrooms, population)
+
     st.success(f"💰 Predicted House Price: RWF {price:,.2f}")
